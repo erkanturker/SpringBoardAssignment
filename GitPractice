@@ -1,0 +1,103 @@
+erkanturker@Erkans-MacBook-Pro SpringBoard % mkdir learn_git_again
+erkanturker@Erkans-MacBook-Pro SpringBoard % cd learn_git_again 
+erkanturker@Erkans-MacBook-Pro learn_git_again % touch third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git init
+Initialized empty Git repository in /Users/erkanturker/Desktop/SpringBoard/learn_git_again/.git/
+erkanturker@Erkans-MacBook-Pro learn_git_again % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+erkanturker@Erkans-MacBook-Pro learn_git_again % git add third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git commit -m "adding third.txt"
+[main (root-commit) 27685dc] adding third.txt
+ Committer: Erkan Turker <erkanturker@Erkans-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git log
+commit 27685dca586c9d3514897c8d14d7cbdd098aba40 (HEAD -> main)
+Author: Erkan Turker <erkanturker@Erkans-MacBook-Pro.local>
+Date:   Thu Dec 7 12:01:40 2023 -0500
+
+    adding third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % touch fourth.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git add fourth.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git commit -m "adding fourth.txt"
+[main d5de474] adding fourth.txt
+ Committer: Erkan Turker <erkanturker@Erkans-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % rm third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+erkanturker@Erkans-MacBook-Pro learn_git_again % git add third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    third.txt
+
+erkanturker@Erkans-MacBook-Pro learn_git_again % git commit -m "removing third.txt"
+[main a5e8867] removing third.txt
+ Committer: Erkan Turker <erkanturker@Erkans-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+erkanturker@Erkans-MacBook-Pro learn_git_again % git log
+commit a5e88672e5ec31ba8d478b1a9f776f1af714d8b2 (HEAD -> main)
+Author: Erkan Turker <erkanturker@Erkans-MacBook-Pro.local>
+Date:   Thu Dec 7 12:06:42 2023 -0500
+
+    removing third.txt
+
+commit d5de47493cbfdc19f96c7ebe0c274b1002506bf3
+Author: Erkan Turker <erkanturker@Erkans-MacBook-Pro.local>
+Date:   Thu Dec 7 12:03:23 2023 -0500
+
+    adding fourth.txt
